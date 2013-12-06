@@ -1,6 +1,5 @@
 body {
-	background-color: black;
-	font-family: ;
+	background: url("../src/blackbg.jpeg"),no-repeat;
 }
 
 .container {
