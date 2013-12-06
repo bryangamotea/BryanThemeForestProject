@@ -1,0 +1,36 @@
+body {
+	background-color: black;
+	font-family: ;
+}
+
+.container {
+	margin: 50px auto;
+	width: 1130px;
+	border: 10px solid white;
+	overflow: hidden;
+}
+
+.imgslider {
+	display: inline-block;
+	width: 2100px;
+	background-color: white;
+}
+
+.images {
+	margin: 5px;
+	height: 500px;
+}
+
+.navbtn {
+	position: absolute;
+	top: 37%;
+	height: 100px;
+}
+
+#rightbtn {
+	right: 14%;
+}
+
+#leftbtn {
+	left: 14%;
+}
