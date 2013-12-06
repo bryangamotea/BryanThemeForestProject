@@ -10,6 +10,14 @@ body {
 	overflow: hidden;
 }
 
+.clearfix {
+	clear: both;
+}
+
+.left {
+	color: white;
+}
+
 .imgslider {
 	width: 2300px;
 	height: 500px;
