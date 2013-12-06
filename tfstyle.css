@@ -6,14 +6,14 @@ body {
 .container {
 	margin: 50px auto;
 	width: 1130px;
-	border: 10px solid white;
+	border: 10px solid #ccc;
 	overflow: hidden;
 }
 
 .imgslider {
-	display: inline-block;
-	width: 2100px;
-	background-color: white;
+	width: 2300px;
+	height: 500px;
+	background-color: #ccc;
 }
 
 .images {
@@ -23,14 +23,14 @@ body {
 
 .navbtn {
 	position: absolute;
-	top: 37%;
+	top: 33%;
 	height: 100px;
 }
 
 #rightbtn {
-	right: 14%;
+	right:225px;
 }
 
 #leftbtn {
-	left: 14%;
+	left: 225px;
 }
