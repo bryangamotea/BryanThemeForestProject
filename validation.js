@@ -1,40 +1,34 @@
 $(document).ready(function() {
 
-	function FormValidation () 
-	{
-		var valid = $("#validate").val();
-		console.log(valid !== (/^[0-9]+$/));
-		if (valid == null || valid == " " || valid !== (/^[0-9]+$/))
-		{
+function FormValidation () 
+{
+  var valid = $("#validate").val(); 
+  $(".errlist").empty();
+  if (valid == "" || valid == " " || isNaN(valid))
+  {
+    $("<li>Ivalid Input. Must be numbers!</li>").appendTo(".errlist");
+  }
+  else if (valid == 0)
+  {
+    $("<li>Nothing to do, you entered zero.</li>").appendTo(".errlist");
+  }
+  else
+  {
+    var numVal = parseInt(valid);
+    x = " ";
+    for (i = numVal; i > 0; i--) 
+    {
+      switch(numVal) {
+        case 1:
+          $("<li>Thank you for entering the number 1!</li>").appendTo(".errlist");
+          break;
+        default:
+          x = x + "<li>Countdown: " + i;
+          $(".errlist").html(x);
+      }
+    }
+  }
+}
 
-			$("#errLog").text("You may have entered a non-numeric input or the text box maybe blank! ");
-
-		}
-
-		if (valid == "0")
-		{
-
-			$("#errLog").text("Nothing to do, you entered a zero.");	
-			
-		} 
-
-		else if (valid == "1")
-		{
-			$("#errLog").text("Thank you for entering the number 1");
-
-		}
-		else if (valid > 1)
-		{
-			x = " ";
-			for (var i = valid; i >= 0; i--)
-			{
-				console.log(i);
-				x = x + "countdown: " + i + "<br>";
-			}
-				$("#errLog").html(x);
-		}
-	}
-
-$("#submitbtn").click(FormValidation);
-
+$("#submitbtn").click(FormValidation);  
 });
