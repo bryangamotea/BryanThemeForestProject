@@ -4,10 +4,10 @@ $(document).ready(function(){
 	function filterLongWords(filter){
 		for(var b= 0; b < myArray.length;b++) {
 			if (myArray[b].length > i){
-				return myArray[b];
+				myArray[b];
 			}
 		}
-	
+	return myArray[b];
 	}
 	$("#submitbtn").click(function(){
 		var result = filterLongWords(myArray);
