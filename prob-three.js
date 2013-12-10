@@ -1,26 +1,24 @@
 $(document).ready(function(){
-	function vowelFunction()
+	
+	$(".errlist").empty();
+	function vowelFunction(vowel)
 	{
-		var vowel = $("#vowel").val();
-		$(".errlist").empty();
-		if (vowel == "a" || vowel == "e" ||vowel == "i" ||vowel == "o" ||vowel == "u")
-		{
-			console.log("you entered a vowel!");
-			return $("<li>This is a vowel</li>").appendTo(".errlist");
+		if (vowel == "a" || vowel == "e" ||vowel == "i" ||vowel == "o" ||vowel == "u"){
+			return "This is a vowel!";
 		} 
-		else if (vowel.length !== 1) 
-		{
-			return $("<li>To many input. One letter at a time!</li>").appendTo(".errlist");
+		else if (vowel.length !== 1) {
+			return "To many input. One letter at a time!";
 		} 
-		else if (isNaN(vowel) !== true)
-		{
-			return $("<li>This is not a letter!</li>").appendTo(".errlist");
+		else if (isNaN(vowel) !== true){
+			return "This is not a letter!";
 		}
-		else
-		{
-			console.log("you entered a consonant!");
-			return $("<li>This is a consonant!</li>").appendTo(".errlist");
+		else{
+			return "This is a consonant!";
 		}
 	} 
-	$("#submitbtn").click(vowelFunction);
+	$("#submitbtn").click(function(){
+
+		var result = vowelFunction($("#vowel").val());
+		$(".errlist").html("<li>" + result + "</li>");
+	});
 });

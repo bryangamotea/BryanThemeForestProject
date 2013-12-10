@@ -1,13 +1,14 @@
 $(document).ready(function(){
 
-	function reverse() 
+	function reverse(str) 
 	{
-		var str = $("#reverseit").val();
 		var rev = str.split("").reverse().join("");
-		$(".errlist").html(rev);
+		return rev;
 	}
 
-	$("#submitbtn").click(reverse);
-
+	$("#submitbtn").click(function(){
+		var rev = reverse($("#reverseit").val());
+		$(".errlist").html(rev);
+	});
 
 });

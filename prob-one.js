@@ -1,19 +1,22 @@
 $(document).ready(function(){
 	
 	$(".errlist").empty();
+
 	function max(maxOne, maxTwo)
-	{
-		if (maxOne > maxTwo)
-		{
+	{	
+		if (maxOne > maxTwo){
 			return maxOne;
-		} else if (maxOne < maxTwo) {
+		} 
+		else if (maxOne < maxTwo){
 			return maxTwo;
-		} else {
-			return $(".errlist").html("<li>Numbers are equal.</li>");
+		} 
+		else{
+			return "Numbers are equal.";
 		}
 	}
 
-	var maxOne = prompt("number 1: ");
-	var maxTwo = prompt("number 2: ");
-	$("<li>"+ max(maxOne,maxTwo) + "</li>").appendTo(".errlist")
+		$("#submit").click(function(){
+			var result = max($("#num1").val(),$("#num2").val());
+			$(".errlist").html("<li>" + result + "</li>");
+		});
 });
