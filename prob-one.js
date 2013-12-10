@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	
 	$(".errlist").empty();
 	function max(maxOne, maxTwo)
 	{

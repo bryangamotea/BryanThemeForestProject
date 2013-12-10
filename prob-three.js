@@ -5,6 +5,7 @@ $(document).ready(function(){
 		$(".errlist").empty();
 		if (vowel == "a" || vowel == "e" ||vowel == "i" ||vowel == "o" ||vowel == "u")
 		{
+			console.log("you entered a vowel!");
 			return $("<li>This is a vowel</li>").appendTo(".errlist");
 		} 
 		else if (vowel.length !== 1) 
@@ -17,6 +18,7 @@ $(document).ready(function(){
 		}
 		else
 		{
+			console.log("you entered a consonant!");
 			return $("<li>This is a consonant!</li>").appendTo(".errlist");
 		}
 	} 
