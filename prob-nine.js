@@ -1,13 +1,17 @@
 $(document).ready(function(){
-	var i = 7;
-	var myArray = new Array("efren","gamotea","bantug","lim", "asdfghjjk");
+	
+	var i = 3;
+	var myArray = new Array("efren","gamotea","bantug","lim");
+	var bryArray = [];
+
 	function filterLongWords(filter){
-		for(var b= 0; b < myArray.length;b++) {
-			if (myArray[b].length > i){
-				myArray[b];
+		for(var b= 0; b < filter.length;b++) {
+			if (filter[b].length > i){
+
+				bryArray.push(filter[b] + "\xa0");
 			}
 		}
-	return myArray[b];
+		return bryArray;
 	}
 	$("#submitbtn").click(function(){
 		var result = filterLongWords(myArray);
