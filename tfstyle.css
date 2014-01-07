@@ -1,5 +1,5 @@
 body {
-	background: url("../src/blackbg.jpeg"),no-repeat;
+	background: url("src/blackbg.jpeg"),no-repeat;
 	font-family: sans-serif;
 }
 
@@ -44,23 +44,23 @@ body {
 }
 
 .item-1 {
-	background: url("../src/item1.jpg") no-repeat center center;
+	background: url("src/item1.jpg") no-repeat center center;
 }
 
 .item-2 {
-	background: url("../src/item2.jpg") no-repeat center center;
+	background: url("src/item2.jpg") no-repeat center center;
 }
 
 .item-3 {
-	background: url("../src/item3.jpg") no-repeat center center;
+	background: url("src/item3.jpg") no-repeat center center;
 }
 
 .item-4 {
-	background: url("../src/item4.jpg") no-repeat center center;
+	background: url("src/item4.jpg") no-repeat center center;
 }
 
 .item-5 {
-	background: url("../src/item5.jpg") no-repeat center center;
+	background: url("src/item5.jpg") no-repeat center center;
 }
 
 .item-content {
